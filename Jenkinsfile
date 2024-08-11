@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         EC2_IP = '13.61.2.196'
-
+    }
 
     stages {
         stage ('fetch code') {
@@ -28,4 +28,4 @@ pipeline {
             }
         }
     }
-}
+}i
