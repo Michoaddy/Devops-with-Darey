@@ -1,21 +1,21 @@
 pipeline {
     agent any
 
-    /*environment {
+    environment {
         EC2_IP = '13.61.2.196'
-    }*/
+
 
     stages {
         stage ('fetch code') {
             steps {
                 script {
                     echo "Pull source code from Git"
-                    git branch: 'jenkins', url: 'https://github.com/Michoaddy/Devops-with-Darey.git'
+                    git branch: 'main', url: 'https://github.com/Michoaddy/Devops-with-Darey.git'
                 }
             }
         }
         
-        /*stage ('deploy to EC2') {
+        stage ('deploy to EC2') {
             steps {
                 script {
                     echo "deploying to shell-script to ec2"
@@ -26,6 +26,6 @@ pipeline {
                     }
                 }
             }
-        }*/
+        }
     }
 }
